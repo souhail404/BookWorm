@@ -1,0 +1,40 @@
+{
+    "banners":[
+        {
+            "id":0,
+            "name":"test 0 img",
+            "small":{
+                "src":"media/images/banner/b5small.png"
+            },
+            "big":{
+                "src":"media/images/banner/b5big.png"
+            }       
+        },
+        {
+            "id":0,
+            "name":"test 0 img",
+            "small":{
+                "src":"media/images/banner/b4small.png"
+            },
+            "big":{
+                "src":"media/images/banner/b4big.png"
+            }       
+        }
+    
+    ],
+    "testimonials":[
+        {
+            "name" : "John Doe",
+            "content" : "I was blown away by the professionalism and expertise of the team at ALKISARIA Company. They were able to help me increase my online presence and generate more leads for my business. I highly recommend their services!"
+        },
+        {
+            "name" : "Sarah M",
+            "content" : "I couldn't be happier with the results of my recent home renovation. Thanks to ALKISARIA Construction, my home now looks better than ever. Their attention to detail and commitment to quality is truly impressive."
+        },
+        {
+            "name" : "Michael B",
+            "content" : "The customer service at ALKISARIA Corporation is top-notch. They really went above and beyond to make sure I was satisfied with my purchase. I will definitely be a repeat customer!"
+        }
+    ]
+    
+}
