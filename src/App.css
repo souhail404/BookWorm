@@ -9,3 +9,284 @@
 a{
   text-decoration: none;
 }
+:root{
+  --h-height:180px;
+  --max-width:1300px;
+}
+#app{
+  padding-top: var(--h-height);
+  position: relative;
+  height: 200vh;
+}
+.container{
+  width: 100%;
+}
+.max-width{
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+.main-container{
+  padding-inline: 3%;
+}
+.page-content{
+  width: 100%;
+  margin-block: 30px;
+  background-color: bisque;
+}
+footer{
+  background-color: gray;
+}
+
+/* HEADER STYLING */
+header{
+  width: 100%;
+  height: var(--h-height);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.h-container{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  grid-row: 12px;
+  background-color: rgb(233, 233, 233);
+}
+header .offers-carousal{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d4a373;
+}
+header .main-header{
+  width: 100%;
+  
+}
+header .offers-carousal .carousal-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x:hidden;
+  position: relative;
+}
+header .carousal-wrapper .carousal-elem{
+  width: 100%;
+  min-width: 100%;
+  padding-inline: 5%;
+  display: flex;
+  justify-content: center;
+}
+header .carousal-wrapper .carousal-elem .offer-txt{
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+header .carousal-wrapper .move-btns .move-btn{
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;  
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+header .carousal-wrapper .move-btns .move-btn:hover{
+  background-color: #0000001c;
+}
+header .carousal-wrapper .move-btns .move-right-btn{
+  left: 12%;
+}
+header .carousal-wrapper .move-btns .move-left-btn{
+  right: 12%;
+}
+header .main-header{
+  padding-inline:3%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    'navlinks navlinks navlinks navlinks actlinks actlinks'
+    'logo logo search search search cart'
+    'collinks collinks collinks collinks collinks collinks';
+}
+header .main-header .navlinks{
+  grid-area: navlinks;
+  width: 100%;
+}
+header .main-header .action-links{
+  grid-area: actlinks;
+  width: 100%;
+}
+header .main-header .logo{
+  grid-area: logo;
+}
+header .main-header .search-field{
+  grid-area: search;
+}
+header .main-header .cart{
+  grid-area: cart;
+}
+header .main-header .collection-links{
+  grid-area: collinks;
+}
+header .main-header .grid-elem{
+  display: flex;
+  align-items: center;
+}
+header .main-header .grid-elem.action-links{
+  justify-content: flex-end;
+}
+header .main-header .grid-elem.links{
+  display: flex;
+  align-items: center;
+}
+header .main-header .grid-elem.links li{
+  padding-inline: 6px;
+}
+
+header .main-header .grid-elem.links li:not(:last-child){
+  border-right: 1px solid rgba(0, 0, 0, 0.137);
+}
+header .main-header .grid-elem.links li.title{
+  border-right: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: 900;
+  text-transform: uppercase;
+}
+header .main-header .grid-elem.links li .link{
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 3px 3px;
+  border-bottom:1px solid transparent;
+}
+header .main-header .grid-elem.links li .link .link-icon-bfr{
+  margin-right: 3px;
+  font-size: 14px;
+}
+header .main-header .grid-elem.links li .link .link-icon-aftr{
+  margin-left: 3px;
+  font-size: 14px;
+}
+header .main-header .grid-elem.links li .link:hover{
+  border-bottom:1px solid #d4a373;
+} 
+header .main-header .grid-elem.logo .logo-wrapper{
+  width: 220px;
+  height: 42px;
+  margin-inline: 6px;
+  display: flex;
+  align-items: center;
+}
+header .main-header .grid-elem.logo .logo-wrapper .logo-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+header .main-header .grid-elem.search-field{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr;
+}
+header .main-header .grid-elem.search-field{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+header .main-header .grid-elem.search-field .field-input{
+  height: 36px;
+  border-radius: none;
+  border: none;
+  border: 1px solid #d4a373;
+}
+header .main-header .grid-elem.search-field .search-form{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr auto;
+}
+header .main-header .grid-elem.search-field .search-form .search-submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  font-size: 18px;
+  background-color: #faedcd;
+  cursor: pointer;
+}
+header .main-header .grid-elem.search-field .search-form .search-input{
+  padding: 0px 6px; 
+}
+header .main-header .grid-elem.search-field .search-form .search-input:focus{
+  outline: none; 
+  border: 2px solid #d4a373;
+}
+header .main-header .grid-elem.cart{
+  display: flex;
+
+  justify-content: flex-end;
+}
+header .main-header .grid-elem.cart .cart-drop-down{
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+}
+header .main-header .grid-elem.cart .cart-drop-down .drp-dwn-btn{
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+header .main-header .grid-elem.cart .cart-drop-down .drp-dwn-btn .infos{
+  margin-left: 6px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+header .main-header .grid-elem.collection-links{
+  justify-content: space-between;
+}
+header .main-header .grid-elem.collection-links .separator{
+  width: .5px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.235);
+}
+header .main-header .grid-elem.collection-links .separator:last-child{
+  display: none;
+}
+header .main-header .grid-elem.collection-links li:not(:last-child){
+  border-right: none;
+}
+header .main-header .grid-elem.collection-links li .link{
+  font-size: 14px;
+}
+
+
+
+
+/* FOOTER STYLING */
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

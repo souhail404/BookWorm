@@ -7,7 +7,11 @@ const Layout = () => {
   return (
     <>
         <Header />
-        <Outlet />
+        <div className="page-content">
+          <div className="container main-container max-width">
+            <Outlet />
+          </div>
+        </div>
         <Footer />
     </>
     )
