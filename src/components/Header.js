@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 // icons import 
-import { AiOutlineRight, AiOutlineLeft, AiOutlineDown, AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineRight, AiOutlineLeft, AiOutlineDown, AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai';
 import { MdOutlineAccountCircle, MdOutlineFavoriteBorder } from 'react-icons/md';
 import { BsCart3} from 'react-icons/bs';
 import LogoImg from "../images/logo/logo.png";
@@ -48,14 +48,13 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="grid-elem search-field">
-                  
                   <form className='search-form' action="">
                     <input className='field-input search-input' type="text" name="search-items" id="" placeholder='Search by Name, Category, Author...' />
                     <button className='field-input search-submit' type="submit"><AiOutlineSearch/></button>
                   </form>
                 </div>
                 <div className="grid-elem cart">
-                  <div className='cart-drop-down'>
+                  <div className='lbi-01 cart-drop-down'>
                     <button className='drp-dwn-btn'> 
                       <BsCart3 className='icon'/>
                       <div className="infos">
@@ -63,6 +62,14 @@ const Header = () => {
                         <p>129 $</p>
                       </div>
                     </button>
+                  </div>
+                  <div className='lbi-01 menu-drop'>
+                    <button className='drp-menu-btn'> 
+                      <AiOutlineMenu className='icon'/>
+                    </button>
+                    <div className="menu">
+                        
+                    </div>
                   </div>
                 </div>
                 <ul className="grid-elem links collection-links">

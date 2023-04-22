@@ -2,7 +2,7 @@
     "banners":[
         {
             "id":0,
-            "name":"test 0 img",
+            "name":"test 1 img",
             "small":{
                 "src":"media/images/banner/b5small.png"
             },
@@ -11,8 +11,8 @@
             }       
         },
         {
-            "id":0,
-            "name":"test 0 img",
+            "id":1,
+            "name":"test 2 img",
             "small":{
                 "src":"media/images/banner/b4small.png"
             },

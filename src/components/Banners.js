@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import data from '../data/data.json'
+import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
 
 const Banners = () => {
     const dataBanners = data.banners;
@@ -154,10 +155,10 @@ const Banners = () => {
                         }
                     </div>
                     <div onClick={()=>{handleRightClick()}} className="banner-btn banner-right-btn">
-                        <span className='btn r-btn'><img src="media/images/icons/expand-arrow.svg" alt="" /></span>
+                        <div className='btn r-btn'><AiOutlineRight className='icon'/></div>
                     </div>
                     <div onClick={()=>{handleLeftClick()}} className="banner-btn banner-left-btn">
-                        <span className='btn l-btn'><img src="media/images/icons/expand-arrow.svg" alt="" /></span>
+                        <div className='btn l-btn'><AiOutlineLeft className='icon'/></div>
                     </div>
                 </div>
 

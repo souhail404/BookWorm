@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 *{
   box-sizing: border-box;
   padding: 0%;
@@ -16,7 +17,6 @@ a{
 #app{
   padding-top: var(--h-height);
   position: relative;
-  height: 200vh;
   background-color: rgb(248, 248, 248);
 }
 .container{
@@ -32,6 +32,9 @@ a{
 .page-content{
   width: 100%;
   margin-block: 30px;
+}
+.page-content section:not(:last-child){
+  margin-bottom: 60px;
 }
 footer{
   background-color: gray;
@@ -66,7 +69,6 @@ header .offers-carousal{
 }
 header .main-header{
   width: 100%;
-  
 }
 header .offers-carousal .carousal-wrapper{
   width: 100%;
@@ -162,7 +164,6 @@ header .main-header .grid-elem.links li.title{
   display: flex;
   align-items: center;
   font-size: 14px;
-  font-family: 900;
   text-transform: uppercase;
 }
 header .main-header .grid-elem.links li .link{
@@ -236,15 +237,21 @@ header .main-header .grid-elem.search-field .search-form .search-input:focus{
 }
 header .main-header .grid-elem.cart{
   display: flex;
-
   justify-content: flex-end;
 }
-header .main-header .grid-elem.cart .cart-drop-down{
+header .main-header .grid-elem.cart .lbi-01:not(:last-child){
+    margin-right: 18px;
+}
+header .main-header .grid-elem.cart .cart-drop-down , header .main-header .grid-elem.cart .menu-drop{
   margin-right: 6px;
   display: flex;
   align-items: center;
+  
 }
-header .main-header .grid-elem.cart .cart-drop-down .drp-dwn-btn{
+header .main-header .grid-elem.cart .menu-drop{
+  display: none;
+}
+header .main-header .grid-elem.cart .cart-drop-down .drp-dwn-btn , header .main-header .grid-elem.cart .menu-drop .drp-menu-btn{
   font-size: 26px;
   display: flex;
   align-items: center;
@@ -260,6 +267,7 @@ header .main-header .grid-elem.cart .cart-drop-down .drp-dwn-btn .infos{
   font-weight: 500;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: flex-start;
 }
 header .main-header .grid-elem.collection-links{
@@ -280,7 +288,144 @@ header .main-header .grid-elem.collection-links li .link{
   font-size: 14px;
 }
 
-
+@media (max-width:1024px) {
+  header .main-header .grid-elem.cart .cart-drop-down .drp-dwn-btn{
+    font-size: 24px;
+  }
+  header .main-header .grid-elem.cart .cart-drop-down .drp-dwn-btn .infos{
+    font-size: 11px;
+    line-height: 13px;
+  }
+  header .main-header .grid-elem.search-field .field-input{
+    height: 30px;
+  }
+  header .main-header .grid-elem.logo .logo-wrapper{
+    width: 200px;
+    height: 30px;
+  }
+  header .main-header .grid-elem.collection-links li .link{
+    font-size: 12px;
+  }
+}
+@media (max-width:900px) {
+  header .main-header{
+    padding-inline:3%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 30px 56px;
+    grid-template-areas:
+      'navlinks navlinks navlinks navlinks navlinks navlinks navlinks navlinks navlinks navlinks actlinks actlinks'
+      'logo logo logo logo search search search search search search cart cart';
+  }
+  header .main-header .grid-elem.collection-links {
+    display: none;
+  }
+  :root{
+    --h-height:120px;
+  }
+  header .offers-carousal{
+    height: 34px;
+  }
+  header .main-header{
+    padding-block: 3px;
+  }
+  header .main-header .grid-elem.links li .link{
+    font-size: 10px;
+  }
+  header .main-header .grid-elem.links li .link .link-icon-bfr{
+    margin-right: 2px;
+    font-size: 12px;
+  }
+  header .main-header .grid-elem.links li .link .link-icon-aftr{
+    margin-left: 2px;
+    font-size: 12px;
+  }
+  header .main-header .grid-elem.links li{
+    padding-inline: 3px;
+  }
+  header .carousal-wrapper .carousal-elem .offer-txt{
+    font-size: 12px;
+  }
+  header .carousal-wrapper .move-btns .move-btn{
+    height: 16px;
+    width: 16px;
+  }
+  header .main-header .grid-elem.logo .logo-wrapper{
+    width: 160px;
+    height: 26px;
+  }
+  header .main-header .grid-elem.search-field .field-input{
+    height: 28px;
+  }
+  header .main-header .grid-elem.search-field .search-form .search-input{
+    padding: 0px 4px; 
+    font-size: 12px;
+  }
+  header .main-header .grid-elem.search-field .search-form .search-submit{
+    width: 36px;
+    font-size: 18px;
+  }
+  header .main-header .grid-elem.cart .cart-drop-down .drp-dwn-btn{
+    font-size: 22px;
+  }
+  header .main-header .grid-elem.cart .cart-drop-down .drp-dwn-btn .infos{
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+@media (max-width:600px) {
+  header .main-header{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'logo logo cart'
+      'search search search';
+    row-gap: 6px;
+    padding-block:6px;
+  }
+  header .main-header .grid-elem.navlinks {
+    display: none;
+  }
+  header .main-header .grid-elem.action-links {
+    display: none;
+  }
+  header .carousal-wrapper .move-btns .move-right-btn{
+    left: 3%;
+  }
+  header .carousal-wrapper .move-btns .move-left-btn {
+    right: 3%;
+  }
+  header .offers-carousal{
+    height: 30px;
+  }
+  header .main-header .grid-elem.search-field .field-input{
+    height: 32px;
+  }
+  header .main-header .grid-elem.search-field .search-form .search-input{
+    font-size: 14px;
+  }
+  header .main-header .grid-elem.search-field .search-form .search-submit{
+    width: 44px;
+  }
+  header .main-header .grid-elem.cart .menu-drop{
+    display: flex;
+  }
+}
+@media (max-width:340px){
+  header .main-header{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      'logo logo cart cart'
+      'search search search search';
+  }
+  header .main-header .grid-elem.cart .lbi-01:not(:last-child){
+    margin-right: 12px;
+  }
+  header .main-header .grid-elem.logo .logo-wrapper{
+    width: 150px;
+    height: 24px;
+  }
+}
 
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
@@ -361,23 +506,19 @@ header .main-header .grid-elem.collection-links li .link{
   cursor: pointer;
 }
 #banners-sec .container .banner-view .banner-right-btn{
-  right: 12px;
+  right: 6px;
 }
 #banners-sec .container .banner-view .banner-left-btn{
-  left: 12px;
+  left: 6px;
 }
-#banners-sec .container .banner-view .banner-btn .btn img{
-  width: 30px;
-  opacity: 0.75;
-}
-#banners-sec .container .banner-view .banner-btn .btn img:hover{
-  background-color: #00000026;
-}
-#banners-sec .container .banner-view .banner-btn .r-btn img{
-  transform: rotate(-90deg);
-}
-#banners-sec .container .banner-view .banner-btn .l-btn img{
-  transform: rotate(90deg);
+#banners-sec .container .banner-view .banner-btn .btn{
+  background-color: hsla(0, 0%, 95%, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding-block: 4px;
+  opacity: 1;
 }
 
 @media (max-width:600px) {
@@ -400,8 +541,162 @@ header .main-header .grid-elem.collection-links li .link{
   #banners-sec .container .banner-view .banner-left-btn{
       left: 8px;
   }
-  #banners-sec .container .banner-view .banner-btn .btn img{
-      width: 24px;
+}
+
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* PRODUCTS LISTING AT HOME SECTION STYLING */
+.categorie-listing{
+  width: 100%;
+}
+.categorie-listing .container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.categorie-listing .sec-header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.categorie-listing .sec-header .slogan{
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: 0.55;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+.categorie-listing .sec-header .categorie-name{
+  font-size: 40px;
+  font-family: 'Cormorant Garamond' , sans-serif;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.categorie-listing .sec-header .mini-desc{
+  font-size: 22px;
+  font-family: 'Cormorant Garamond' , sans-serif;
+  font-weight: 400;
+  max-width: 70%;
+}
+.categorie-listing .sec-content{
+  margin-top: 30px;
+  width: 100%;
+  
+}
+.categorie-listing .sec-content .products-wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+  row-gap: 36px;
+  column-gap: 24px;
+} 
+.categorie-listing .sec-content .book-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.categorie-listing .sec-content .book-wrapper .img-wrapper{
+  width: 100%;
+  aspect-ratio: 3/4;
+  position: relative;
+  overflow:hidden ;
+}
+.categorie-listing .sec-content .book-wrapper .img-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+.categorie-listing .sec-content .book-wrapper .img-wrapper .hover-slide{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: hsla(30, 53%, 64%, 0.9);
+  transform: translateX(105%);
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.categorie-listing .sec-content .book-wrapper .img-wrapper .hover-slide p{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.categorie-listing .sec-content .book-wrapper .img-wrapper:hover .hover-slide{
+  transform: translateX(0%);
+}
+
+.categorie-listing .sec-content .book-wrapper .details-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  color: black;
+}
+.categorie-listing .sec-content .book-wrapper .details-wrapper .author{
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: 0.75;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.categorie-listing .sec-content .book-wrapper .details-wrapper .book-name{
+  font-size: 22px;
+  font-family: 'Cormorant Garamond' , sans-serif;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 4px;
+}
+.categorie-listing .sec-content .book-wrapper .details-wrapper .price{
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: 0.85;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+@media (max-width:1024px){
+  .categorie-listing .sec-content .products-wrapper{
+    grid-template-columns: repeat(3 , 1fr);
+  } 
+}
+@media (max-width:600px){
+  .categorie-listing .sec-content .products-wrapper{
+    grid-template-columns: repeat(2 , 1fr);
+  } 
+  .categorie-listing .sec-content .book-wrapper .details-wrapper .book-name{
+    font-weight: 700;
+  }
+  .categorie-listing .sec-content .book-wrapper .details-wrapper .price{
+    opacity: 0.8;
+  }
+}
+@media (max-width:360px){
+  .categorie-listing .sec-content .products-wrapper{
+    grid-template-columns: repeat(1 , 1fr);
+  } 
+}
+@media (max-width:600px) {
+  .categorie-listing .sec-header{
+    padding-inline: 6px;
+  }
+  .categorie-listing .sec-header .categorie-name{
+    font-size: 34px;
+  }
+  .categorie-listing .sec-header .mini-desc{
+    font-size: 20px;
+    max-width: 100%;
   }
 }
 
@@ -414,4 +709,5 @@ footer{
   bottom: 0;
   right: 0;
   left: 0;
+  display: none;
 }
