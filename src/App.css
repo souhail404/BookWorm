@@ -33,8 +33,8 @@ a{
   width: 100%;
   margin-block: 30px;
 }
-.page-content section:not(:last-child){
-  margin-bottom: 60px;
+.page-content section:not(:last-of-type){
+  margin-bottom: 80px;
 }
 footer{
   background-color: gray;
@@ -697,6 +697,161 @@ header .main-header .grid-elem.collection-links li .link{
   .categorie-listing .sec-header .mini-desc{
     font-size: 20px;
     max-width: 100%;
+  }
+}
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* OFFER CALL SECTION STYLING */
+.Offer-call-sec{
+  width: 100%;
+}
+.offer-call-sec .container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offer-call-sec .container .offer-view{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 32px 24px;
+}
+.offer-call-sec .offer-view .bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.offer-call-sec .offer-view .bg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offer-call-sec .offer-view .content{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+.offer-call-sec .offer-view .content .left{
+  width: 50%;
+  padding-inline: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.offer-call-sec .offer-view .content .right{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offer-call-sec .offer-view .content  .right img{
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: contain;
+}
+.offer-call-sec .offer-view .content .left  .store-name{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 18px;
+}
+.offer-call-sec .offer-view .content .left .offer-txt{
+  margin-bottom: 24px;
+}
+.offer-call-sec .offer-view .content .left .offer-txt .txt{
+  font-family: 'Cormorant Garamond' , sans-serif;
+}
+.offer-call-sec .offer-view .content .left .offer-txt .title-txt{
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+.offer-call-sec .offer-view .content .left .offer-txt .desc-txt{
+  font-size: 18px;
+  font-weight: 400;
+}
+.offer-call-sec .offer-view .content .left .call-btn .btn{
+  padding-block: 12px;
+  background-color: #d4a373;
+  color: black;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  text-transform: uppercase;
+}
+.offer-call-sec .offer-view .content .left .call-btn .btn .btn-icon{
+  margin-left: 6px;
+  transition: all 0.3s ease;
+}
+.offer-call-sec .offer-view .content .left .call-btn .btn:hover .btn-icon{
+  transform: translateX(6px);
+}
+
+@media (max-width:900px) {
+  .offer-call-sec .offer-view .content .right{
+    width: 40%;
+  }
+  .offer-call-sec .offer-view .content .left{
+    width: 60%;
+  }
+  .offer-call-sec .offer-view .content  .right img{
+    max-width: 260px;
+    max-height: 260px;
+  }
+  .offer-call-sec .offer-view .content .left  .store-name{
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .offer-call-sec .offer-view .content .left .offer-txt{
+    margin-bottom: 24px;
+  }
+  .offer-call-sec .offer-view .content .left .offer-txt .title-txt{
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .offer-call-sec .offer-view .content .left .offer-txt .desc-txt{
+    font-size: 16px;
+  }
+  .offer-call-sec .offer-view .content .left .call-btn .btn{
+    padding-block: 8px;
+    width: 180px;
+  }
+}
+@media (max-width:600px){
+  .offer-call-sec .offer-view .content{
+    flex-direction: column;
+  }
+  .offer-call-sec .offer-view .content .left{
+    width: 100%;
+    padding-inline: 12px;
+    margin-bottom: 18px;
+  }
+  .offer-call-sec .offer-view .content .right{
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .offer-call-sec .offer-view .content  .right img{
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .offer-call-sec .offer-view .content .left .call-btn .btn{
+    font-size: 14px;
   }
 }
 
